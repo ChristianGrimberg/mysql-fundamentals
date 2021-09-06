@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    container_name: mysql-fundamentals
+    image: "mysql:latest"
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: Str0ngP4$$w0rd
+        MYSQL_DATABASE: practice
+        MYSQL_USER: client
+        MYSQL_PASSWORD: Str0ngP4$$w0rd
+    ports:
+        - "9906:3306"
+  php-server:
+    container_name: php-fundamentals
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql-db
+    ports:
+      - "80:80"
+    volumes:
+      - ./php/src:/var/www/html/
+  php-myadmin:
+    container_name: myadmin-fundamentals
+    image: "phpmyadmin/phpmyadmin:latest"
+    ports:
+      - '8080:8080'
+    restart: always
+    environment:
+      PMA_HOST: practice
+    depends_on:
+      - mysql-db
