@@ -7,17 +7,17 @@
     $host = 'mysql-db';
 
     // Database use name
-    $user = 'client';
+    $user = 'user';
 
     //database user password
-    $pass = 'Str0ngP4$$w0rd';
+    $pass = 'secret1234';
 
     // check the MySQL connection status
     $conn = new mysqli($host, $user, $pass);
 
     if ($conn -> connect_error) {
-        die("</h3>Connection failed: ".$conn->connect_error."</h3>");
+        die("<h3>Connection failed: ".$conn->connect_error."</h3>");
     } else {
-        echo "</h3>Connected to MySQL server successfully!</h3>";
+        echo "<h3>Connected to MySQL server successfully!</h3>";
     }
 ?>

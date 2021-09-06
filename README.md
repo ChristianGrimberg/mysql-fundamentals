@@ -12,3 +12,4 @@
     docker-compose down
     ```
 1. Open Web Browser to [http://localhost](http://127.0.0.1)
+1. For PHP My Admin open Web Browser to [http://localhost:8080](http://localhost:8080) with client user to MySQL.

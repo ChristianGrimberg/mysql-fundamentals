@@ -8,14 +8,14 @@ services:
     environment:
         MYSQL_ROOT_PASSWORD: Str0ngP4$$w0rd
         MYSQL_DATABASE: practice
-        MYSQL_USER: client
-        MYSQL_PASSWORD: Str0ngP4$$w0rd
+        MYSQL_USER: user
+        MYSQL_PASSWORD: secret1234
     ports:
-        - "9906:3306"
+        - "3306:3306"
   php-server:
     container_name: php-fundamentals
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
     depends_on:
       - mysql-db
@@ -27,9 +27,11 @@ services:
     container_name: myadmin-fundamentals
     image: "phpmyadmin/phpmyadmin:latest"
     ports:
-      - '8080:8080'
+      - '8080:80'
     restart: always
     environment:
-      PMA_HOST: practice
+      PMA_HOST : mysql-db
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: Str0ngP4$$w0rd
     depends_on:
       - mysql-db
