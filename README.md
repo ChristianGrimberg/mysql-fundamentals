@@ -1,6 +1,5 @@
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/ChristianGrimberg/mysql-php-fundamentals)
 # MySQL & PHP fundamentals
-Go to the [Public Web Site](https://christiangrimberg.github.io/mysql-php-fundamentals/)
 > by Educacion IT
 ## Test locally with PHP support
 1. Install Docker & Docker Compose
