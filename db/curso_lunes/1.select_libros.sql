@@ -1,5 +1,5 @@
 SELECT
-    id
+    idclientes
     ,nombre
     ,apellido
 FROM curso_lunes.clientes;

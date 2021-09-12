@@ -1,40 +1,47 @@
 version: '3.8'
 
-services:
-  mysql-db:
-    container_name: mysql-fundamentals
-    image: "mysql:latest"
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
+services: 
+  maria-db:
+    container_name: mariadb-fundamentals
+    image: mariadb:latest
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: secret45678
       MYSQL_USER: user
       MYSQL_PASSWORD: secret1234
-    ports:
-      - "3306:3306"
     volumes:
       - ./db/init:/docker-entrypoint-initdb.d
+    # Add "forwardPorts": ["3306"] to **devcontainer.json** to forward MariaDB locally.
+    # (Adding the "ports" property to this file will not forward from a Codespace.)
   php-server:
     container_name: php-fundamentals
     build:
       context: .
-      dockerfile: Dockerfile
-    depends_on:
-      - mysql-db
-    ports:
-      - "80:80"
+      dockerfile: PHP.dockerfile
+      args:
+        # On Linux, you may need to update USER_UID and USER_GID below if not your local UID is not 1000.
+        USER_UID: 1000
+        USER_GID: 1000
     volumes:
       - ./php/src:/var/www/html/
+      - ./:/workspace:cached
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+    network_mode: service:maria-db
+    # Uncomment the next line to use a non-root user for all processes.
+    user: vscode
+    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
+    # (Adding the "ports" property to this file will not forward from a Codespace.)
   php-myadmin:
     container_name: myadmin-fundamentals
-    image: "phpmyadmin/phpmyadmin:latest"
+    image: phpmyadmin/phpmyadmin:latest
     ports:
       - '8080:80'
     restart: always
     environment:
-      PMA_HOST : mysql-db
+      PMA_HOST : maria-db
       MYSQL_USERNAME: root
       MYSQL_ROOT_PASSWORD: secret45678
     depends_on:
-      - mysql-db
-    
+      - maria-db

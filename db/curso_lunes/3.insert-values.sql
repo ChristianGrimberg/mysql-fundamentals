@@ -1,13 +1,11 @@
 USE curso_lunes;
 
-INSERT INTO clientes
-(
+INSERT INTO clientes (
     nombre
     ,apellido
     ,cuit
 )
-VALUES
-(
+VALUES (
     'pedro'
     ,'perez'
     ,'34-34344545-4'
