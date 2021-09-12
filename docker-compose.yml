@@ -11,8 +11,6 @@ services:
       MYSQL_PASSWORD: secret1234
     volumes:
       - ./db/init:/docker-entrypoint-initdb.d
-    # Add "forwardPorts": ["3306"] to **devcontainer.json** to forward MariaDB locally.
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
   php-server:
     container_name: php-fundamentals
     build:
@@ -27,12 +25,10 @@ services:
       - ./:/workspace:cached
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
-    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
     network_mode: service:maria-db
-    # Uncomment the next line to use a non-root user for all processes.
     user: vscode
-    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
+    depends_on:
+      - maria-db
   php-myadmin:
     container_name: myadmin-fundamentals
     image: phpmyadmin/phpmyadmin:latest
