@@ -1,6 +1,6 @@
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/ChristianGrimberg/mysql-php-fundamentals)
-# MySQL Fundamentals
-> by [Educacion IT](https://www.educacionit.com/)
+# [MySQL Fundamentals](https://www.educacionit.com/curso-de-introduccion-sql)
+> by Educacion IT
 ## Using the development environment with Docker and Visual Studio Code
 1. Into Visual Studio Code press keys `Ctrl` + `Shift` + `P`
 1. Select o find: __`Remote-Containers:`__ Reopen in Container
