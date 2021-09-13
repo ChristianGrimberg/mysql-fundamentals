@@ -5,12 +5,14 @@ SHOW TABLES;
 -- DDL - Lenguage de Definicion de Datos (Data Definition Language)
 
 -- Create table
-CREATE TABLE IF NOT EXISTS gente (
+CREATE TABLE IF NOT EXISTS curso_lunes.gente (
     nombre VARCHAR(60)
     ,fecha DATE
 );
-DESCRIBE gente;
+DESCRIBE curso_lunes.gente;
 
+-- Other method to show a table
+SHOW CREATE TABLE curso_lunes.gente;
 
 -- Rename [gente] by [personas]
 ALTER TABLE curso_lunes.gente RENAME personas;
@@ -21,9 +23,8 @@ ALTER TABLE curso_lunes.personas ADD comentario VARCHAR(100);
 DESCRIBE curso_lunes.personas;
 
 -- Change data type of a field
-USE curso_lunes;
-ALTER TABLE personas MODIFY COLUMN comentario VARCHAR(150);
-DESCRIBE personas;
+ALTER TABLE curso_lunes.personas MODIFY COLUMN comentario VARCHAR(150);
+DESCRIBE curso_lunes.personas;
 
 -- Other method to change data type of a field
 ALTER TABLE curso_lunes.personas CHANGE comentario observacion VARCHAR(200);
