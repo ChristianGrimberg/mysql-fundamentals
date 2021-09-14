@@ -198,4 +198,6 @@ SELECT * FROM curso_lunes.facturas
 ORDER BY precio DESC;
 
 -- LIMIT
-SELECT * FROM curso_lunes.clientes LIMIT 2;
+SELECT * FROM curso_lunes.clientes LIMIT 2, 3;
+SELECT * FROM curso_lunes.clientes LIMIT 0, 3;
+SELECT * FROM curso_lunes.clientes LIMIT 2 OFFSET 3;
