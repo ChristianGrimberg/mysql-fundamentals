@@ -51,3 +51,31 @@ SELECT *
 FROM curso_lunes.clientes;
 --COMMIT;
 SET autocommit = 1;
+
+-- DISTINCT clause
+SELECT DISTINCT
+    nombre
+FROM curso_lunes.clientes;
+
+-- Operators
+/*
+=
+>
+<
+>=
+<=
+<>
+!=
+*/
+SELECT * FROM curso_lunes.clientes
+WHERE idclientes >= 3;
+
+-- Logic Operators
+SELECT * FROM curso_lunes.clientes
+WHERE 
+    idclientes = 3
+    AND nombre = 'fernanda'
+    AND (
+        apellido = 'porfido'
+        OR cuit = '1'
+    );
