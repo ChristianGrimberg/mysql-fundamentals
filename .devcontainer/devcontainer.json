@@ -4,7 +4,7 @@
 {
 	"name": "PHP & MariaDB (Community)",
 	"dockerComposeFile": "../docker-compose.yml",
-	"service": "php-server",
+	"service": "alpine-app",
 	"workspaceFolder": "/workspace",
 	
 	// Set *default* container specific settings.json values on container create.
@@ -22,9 +22,9 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"mtxr.sqltools",
 		"mtxr.sqltools-driver-mysql",
 		"formulahendry.vscode-mysql",
-		"mtxr.sqltools",
 		"eamodio.gitlens",
 		"felixfbecker.php-debug",
 		"felixfbecker.php-intellisense",
@@ -32,7 +32,7 @@
 	],
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
-	"forwardPorts": [3306, 80],
+	"forwardPorts": [3306],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"

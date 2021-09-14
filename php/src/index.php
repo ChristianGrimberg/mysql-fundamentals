@@ -4,7 +4,7 @@
     //These are the defined authentication environment in the db service
 
     // The MySQL service named in the docker-compose.yml.
-    $host = 'mysql-db';
+    $host = 'maria-db';
 
     // Database use name
     $user = 'user';

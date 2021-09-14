@@ -1,8 +1,25 @@
 version: '3.8'
 
-services: 
+services:
+  alpine-app:
+    container_name: alpine-app
+    build:
+      context: .
+      dockerfile: alpine.dockerfile
+      args:
+        # On Linux, you may need to update USER_UID and USER_GID below if not your local UID is not 1000.
+        USER_UID: 1000
+        USER_GID: 1000
+    volumes:
+      - ./:/workspace:cached
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+    network_mode: service:maria-db
+    user: vscode
+    depends_on:
+      - maria-db
   maria-db:
-    container_name: mariadb-fundamentals
+    container_name: maria-db
     image: mariadb:latest
     restart: unless-stopped
     environment:
@@ -15,18 +32,11 @@ services:
     container_name: php-fundamentals
     build:
       context: .
-      dockerfile: PHP.dockerfile
-      args:
-        # On Linux, you may need to update USER_UID and USER_GID below if not your local UID is not 1000.
-        USER_UID: 1000
-        USER_GID: 1000
+      dockerfile: php.dockerfile
     volumes:
       - ./php/src:/var/www/html/
-      - ./:/workspace:cached
-    # Overrides default command so things don't shut down after the process ends.
-    command: sleep infinity
-    network_mode: service:maria-db
-    user: vscode
+    ports:
+      - '80:80'
     depends_on:
       - maria-db
   php-myadmin:
