@@ -1,6 +1,6 @@
 [Inicio](../../README.md)
 # Modulo 1
-## Laboratorio 1
+## [Laboratorio 1](1-laboratorio.sql)
 1. Eliminar si existe la base de datos Laboratorio.
 1. Crear la base de datos Laboratorio.
 1. Crear la tabla Facturas dentro de la base de datos con la siguiente estructura:

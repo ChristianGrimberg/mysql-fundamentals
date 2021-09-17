@@ -10,7 +10,7 @@ CREATE TABLE laboratorio.facturas (
     ,ClienteID INT NULL
     ,ArticuloID INT NULL
     ,FECHA DATE NULL
-    ,MONTO DECIMAL(15,3) NULL
+    ,MONTO DOUBLE NULL
     ,PRIMARY KEY(Letra,Numero)
 );
 -- DESCRIBE laboratorio.facturas;
@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS laboratorio.articulos;
 CREATE TABLE laboratorio.articulos (
     ArticuloID INT NOT NULL AUTO_INCREMENT
     ,Nombre VARCHAR(50) NOT NULL
-    ,Precio DECIMAL(15,3) NULL
+    ,Precio DOUBLE NULL
     ,Stock INT NULL
     ,PRIMARY KEY(ArticuloID)
 );
