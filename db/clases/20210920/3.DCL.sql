@@ -28,3 +28,8 @@ FLUSH PRIVILEGES;
 -- ELIMINAR USUARIO
 DROP USER mylo@localhost;
 FLUSH PRIVILEGES;
+
+-- OTORGAR DISTINTOS PERMISOS
+GRANT SELECT, INSERT, UPDATE ON curso_lunes.clientes TO pepe@localhost;
+GRANT SELECT, DELETE ON curso_lunes.clientes TO maria@localhost;
+FLUSH PRIVILEGES;
