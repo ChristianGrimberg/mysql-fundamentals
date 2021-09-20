@@ -1,0 +1,22 @@
+{
+    "sqltools.connections": [
+        {
+            "name": "MySql Fundamentals",
+            "driver": "MariaDB",
+            "server": "localhost",
+            "previewLimit": 50,
+            "port": 3306,
+            "username": "root",
+            "password": "secret45678"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "mylo@localhost",
+            "username": "mylo",
+            "password": "1234"
+        }
+    ]
+}
