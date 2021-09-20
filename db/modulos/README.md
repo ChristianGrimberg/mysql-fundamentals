@@ -17,6 +17,18 @@
 1. Cargar 5 registros en las tablas Facturas, Artículos y Clientes.
 
 ## [Laboratorio 2](2-laboratorio.sql)
+1. Llenar las tablas artículos clientes y facturas con 5 registros cada una.
+1. Basándose en la tabla artículos obtener los siguientes listados.
+    1. artículos con precio mayor a 100
+    1. artículos con precio entre 20 y 40 (usar < y >)
+    1. artículos con precio entre 40 y 60 (usar BETWEEN)
+    1. artículos con precio = 20 y stock mayor a 30
+    1. artículos con precio (12,20,30) no usar IN
+    1. artículos con precio (12,20,30) usar el IN
+    1. artículos cuyo precio no sea (12,20,30)
+1. Listar los artículos ordenados por precio de mayor a menor, y si hubiera precios iguales deben quedar ordenados por nombre.
+1. Listar todos los artículos incluyendo una columna denominada precio con IVA, la cual deberá tener el monto con el iva del producto.
+1. Listar todos los artículos incluyendo una columna denominada “cantidad de cuotas” y otra “valor de cuota”, la cantidad es fija y es 3, el valor de cuota corresponde a 1/3 del monto con un 5% de interés.
 ## [Laboratorio 2 Adicional](2-laboratorio-adicional.sql)
 1. Seleccionar todos los registros de la tabla Articulos.
 1. Mostrar los artículos con precio menor o igual a 50.
