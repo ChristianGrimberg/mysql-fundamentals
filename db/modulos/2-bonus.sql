@@ -1,7 +1,9 @@
 -- BONUS TRACK 2
 
 -- 1. Listar empleados ordenados por apellido.
-SELECT * FROM bonus.empleados;
+SELECT * FROM bonus.empleados
+ORDER BY apellido ASC;
+
 -- 2. Listar nombre y apellido (en una sola columna), y fecha de ingreso de empleados ordenados por fecha de ingreso, de la más actual a la más antigua.
 -- 3. Listar nombre y apellido (en una sola columna llamada “Empleado”), y año de ingreso de empleados ordenados por año de ingreso, del más antiguo al más actual.
 -- 4. Listar inicial del nombre y apellido (en una sola columna llamada “Empleado”), y año de ingreso de los empleados ingresados en el segundo semestre del año 1989.
