@@ -40,3 +40,19 @@
 1. Obtener un listado de artículos con precio con IVA menor a 100.
 1. Obtener un listado de artículos cuyo stock sea menor a 10 y precio con iva mayor a 200.
 1. Obtener un listado de artículos que pagaderos en 3 cuotas sin interes, tenga un valor de cuota menor a 50$
+
+## [Bonus 2](2-bonus.sql)
+1. Listar empleados ordenados por apellido.
+1. Listar nombre y apellido (en una sola columna), y fecha de ingreso de empleados ordenados por fecha de ingreso, de la más actual a la más antigua.
+1. Listar nombre y apellido (en una sola columna llamada “Empleado”), y año de ingreso de empleados ordenados por año de ingreso, del más antiguo al más actual.
+1. Listar inicial del nombre y apellido (en una sola columna llamada “Empleado”), y año de ingreso de los empleados ingresados en el segundo semestre del año 1989.
+1. Listar empleados ordenados por sexo, teniendo en cuenta que el dato correspondiente al sexo está dado por la última letra del campo empleado_id
+1. Listar empleadas mujeres pertenecientes a la editorial 0736
+1. Listar autores nacidos fuera de la provincia de Buenos Aires (BA) y de la Ciudad de Buenos Aires.
+1. Listar novelas publicadas antes del año 2000.
+1. Listar libros sin precio asignado.
+1. Listar libros ordenados por categoría, sólo para categorías conocidas.
+1. Listar locales que contengan la palabra “librería” como parte de su nombre.
+1. Listar libros agregando una columna que tenga el precio de cada libro incrementado en un 51%, una columna con el precio con un descuento del 10% y una columna, con el valor de cuota en caso de venderse en 6 cuotas con un recargo del 25%. Dar a cada columna calculada una misma precisión decimal.
+1. Listar libros que contengan las palabras “de” ó “del” en el nombre.
+1. Listar ventas registradas en el primer semestre de cualquier año cuyo método de pago no sea transferencia ni efectivo
