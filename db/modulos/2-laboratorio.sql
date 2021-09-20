@@ -24,8 +24,8 @@ WHERE
 SELECT * FROM laboratorio.articulos
 WHERE
     precio = 12
-    AND precio = 20
-    AND precio = 30;
+    OR precio = 20
+    OR precio = 30;
 
 -- artículos con precio (12,20,30) usar el IN
 SELECT * FROM laboratorio.articulos
@@ -52,6 +52,5 @@ FROM laboratorio.articulos;
 SELECT
     *
     ,3 AS "cantidad de cuotas"
-    ,"1/3" AS "valor de cuota"
-    ,(precio /3) * 1.05
+    ,(precio /3) * 1.05 AS "valor de cuota"
 FROM laboratorio.articulos;
