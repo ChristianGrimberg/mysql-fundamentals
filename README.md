@@ -16,5 +16,10 @@
     ```
 1. Open Web Browser to [http://localhost](http://127.0.0.1)
 1. For PHP My Admin open Web Browser to [http://localhost:8080](http://localhost:8080) with client user to MySQL.
-## Practice
-1. [Modules](db/modulos/README.md)
+
+## Classes content
+1. [Class 1 Folder](db/clases/20210906)
+1. [Class 2 Folder](db/clases/20210913)
+1. [Class 3 Folder](db/clases/20210920)
+## Practice with labs and bonus
+### [Modules](db/modulos/README.md)
