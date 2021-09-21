@@ -77,3 +77,65 @@ VALUES
     ,(64,'Aire acondicionado','AIRE ACONDICIONADOR SP WSX09CG5R 2500WFS',1599,15,'WESTINGHOUSE');
 
 SELECT * FROM curso_lunes.articulos;
+
+
+-- FUNCIONES
+SELECT MAX(precio) AS MaximoPrecio FROM curso_lunes.articulos;
+
+SELECT MIN(precio) AS MaximoPrecio FROM curso_lunes.articulos;
+
+SELECT COUNT(*) AS MaximoPrecio FROM curso_lunes.articulos;
+
+SELECT SUM(stock) AS Suma 
+FROM curso_lunes.articulos
+WHERE marca = 'sony';
+
+SELECT CONCAT('USD ',ROUND(AVG(precio),2)) AS Promedio
+FROM curso_lunes.articulos
+WHERE marca = 'sony';
+
+-- SUBCONSULTAS
+SELECT * FROM curso_lunes.articulos
+WHERE precio = (SELECT MAX(precio) FROM curso_lunes.articulos);
+
+SELECT * FROM curso_lunes.articulos
+WHERE precio = (SELECT MIN(precio) FROM curso_lunes.articulos);
+
+
+-- AGRUPAMIENTO
+SELECT DISTINCT marca FROM curso_lunes.articulos;
+
+SELECT
+    marca
+    ,COUNT(*) AS Cantidad
+FROM curso_lunes.articulos
+WHERE marca IN ('admiral','lg','sony')
+GROUP BY marca
+ORDER BY marca ASC;
+
+SELECT
+    marca
+    ,ROUND(AVG(precio),2) AS Promedio
+FROM curso_lunes.articulos
+GROUP BY marca;
+
+SELECT
+    MAX(precio) AS Maximo
+    ,descripcion
+    ,marca
+FROM curso_lunes.articulos
+GROUP BY
+    descripcion
+    ,marca
+ORDER BY
+    descripcion ASC
+    ,marca ASC
+    ,precio DESC;
+
+-- FILTRO DE AGRUPACION
+SELECT
+    marca
+    ,SUM(precio) AS ImporteTotal
+FROM curso_lunes.articulos
+GROUP BY marca
+HAVING ImporteTotal < 1000;
