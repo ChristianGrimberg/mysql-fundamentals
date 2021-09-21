@@ -139,3 +139,18 @@ SELECT
 FROM curso_lunes.articulos
 GROUP BY marca
 HAVING ImporteTotal < 1000;
+
+-- FECHAS
+SELECT NOW();
+SELECT SYSDATE();
+SELECT CURDATE();
+
+SELECT DATE_FORMAT(CURDATE(),'%d/%m/%y') AS Fecha;
+SELECT DATE_FORMAT(CURDATE(),'%d/%m/%Y') AS Fecha;
+SELECT DATE_FORMAT(CURDATE(),'%d/%M/%Y') AS Fecha;
+SELECT DATE_FORMAT(CURDATE(),'%W/%d/%M/%Y') AS Fecha;
+
+SET LC_TIME_NAMES = 'es_ES';
+SELECT DATE_FORMAT(CURDATE(),'%W, %d de %M de %Y') AS Fecha;
+
+SELECT DATE_FORMAT(SYSDATE(),'%d/%m/%y %H:%i:%S') AS Fecha;
