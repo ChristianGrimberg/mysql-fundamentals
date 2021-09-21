@@ -81,5 +81,3 @@ WHERE idclientes IN (1,4,6);
 TRUNCATE curso_lunes.clientes;
 
 SELECT * FROM curso_lunes.clientes;
-
--- 
