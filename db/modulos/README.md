@@ -16,6 +16,7 @@
     ![Clientes](../../img/clientes.png)
 1. Cargar 5 registros en las tablas Facturas, Artículos y Clientes.
 
+# Modulo 2
 ## [Laboratorio 2](2-laboratorio.sql)
 1. Llenar las tablas artículos clientes y facturas con 5 registros cada una.
 1. Basándose en la tabla artículos obtener los siguientes listados.
@@ -56,3 +57,33 @@
 1. Listar libros agregando una columna que tenga el precio de cada libro incrementado en un 51%, una columna con el precio con un descuento del 10% y una columna, con el valor de cuota en caso de venderse en 6 cuotas con un recargo del 25%. Dar a cada columna calculada una misma precisión decimal.
 1. Listar libros que contengan las palabras “de” ó “del” en el nombre.
 1. Listar ventas registradas en el primer semestre de cualquier año cuyo método de pago no sea transferencia ni efectivo
+
+# Modulo 3
+## [Laboratorio 3: Funciones]()
+1. Obtener el monto máximo de factura.
+2. Obtener el monto mínimo de factura.
+3. Obtener el monto mínimo de factura entre los años 2011 y 2020.
+4. Obtener el monto promedio de factura.
+5. Obtener la factura con el monto promedio del año 2011.
+6. Obtener la cantidad de facturas.
+7. Obtener la cantidad de facturas que tienen un monto entre $500 y $3.300.
+8. Obtener la cantidad de facturas que hay en cada año.
+9. Obtener la cantidad de facturas y el monto promedio en cada año.
+10. Obtener la suma del monto y el promedio de las facturas según la letra.
+
+## [Bonus 3: Resumiendo y agrupando información]()
+1. Listar cantidad de empleados.
+2. Listar cantidad de empleados de sexo masculino.
+3. Listar cantidad de autores de la provincia de Buenos Aires (BA).
+4. Listar cantidad de libros por autor.
+5. Listar cantidad de libros que no sean novelas.
+6. Listar cantidad de libros con precio mayor a 15.
+7. Listar cantidad de locales con código que comience con 7.
+8. Listar cantidad de libros por factura.
+9. Listar cantidad de unidades vendidas por libro.
+10. Listar cantidad de facturas por local.
+11. Listar cantidad de unidades vendidas por forma de pago.
+12. Listar cantidad de libros, precio máximo, precio mínimo, promedio de precio por categoría.
+13. Listar cantidad de libros, precio máximo, precio mínimo, promedio de precio por año de publicación.
+14. Listar precio máximo por editorial.
+15. Listar cantidad de libros sin precio por editorial.
