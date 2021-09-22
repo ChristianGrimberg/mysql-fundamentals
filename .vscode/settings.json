@@ -1,4 +1,12 @@
 {
+    "editor.renderWhitespace": "boundary",
+    "git.autofetch": true,
+    "git.autofetchPeriod": 60,
+    "git.confirmSync": false,
+    "git.enableCommitSigning": true,
+    "markdown.styles": [
+        "css/markdown-styles.css"
+    ],
     "sqltools.connections": [
         {
             "name": "MySql Fundamentals",
