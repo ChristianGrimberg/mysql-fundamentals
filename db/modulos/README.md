@@ -16,6 +16,16 @@
     ![Clientes](../../img/clientes.png)
 1. Cargar 5 registros en las tablas Facturas, Artículos y Clientes.
 
+## [Bonus 2: Construyendo bases de datos y tablas](1-bonus.sql)
+1. Crear una base de datos llamada _librería_. La misma estará conformada por 8 tablas, las cuales tendrán la siguiente estructura:
+
+    ![Bonus DB](../../img/1-bonus-db.png)
+
+1. Crear cada una de las tablas utilizando la sentencia _CREATE_ del subconjunto de sentencias DDL (Data Definition Language) del lenguaje SQL.
+1. Una vez creadas todas las tablas, insertar un conjunto de registros en cada una de ellas, utilizando el script provisto en la sección de descargas.
+1. Luego de insertar los registros, definir claves primarias (Primary Key) en cada tabla teniendo en cuenta que cada tabla tiene un campo con sufijo _“\_id”_ que identifica al campo clave. Asimismo, la lógica de negocio indica que un mismo número de factura se puede repetir en varios locales y en un mismo local, pero con distintos códigos de libros, y la combinación de autor/libro es única.
+1. Examinemos los datos ingresados e insertemos 3 registros en cada una de las tablas, utilizando la sentencia INSERT del subconjunto de sentencias DML (Data Manipulation Language) del lenguaje SQL.
+
 # Modulo 2
 ## [Laboratorio 2](2-laboratorio.sql)
 1. Llenar las tablas artículos clientes y facturas con 5 registros cada una.
