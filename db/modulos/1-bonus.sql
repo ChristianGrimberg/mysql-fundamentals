@@ -268,3 +268,77 @@ VALUES
     ,('8042','423','1994-09-14 00:00:00',10,'Transf','BU1032')
     ,('8042','723','1993-03-11 00:00:00',25,'Cheque','BU1111')
     ,('8042','8791','1993-05-22 00:00:00',30,'Cheque','PC1035');
+
+-- Punto 4
+ALTER TABLE libreria.puestos
+ADD PRIMARY KEY(puesto_id);
+
+ALTER TABLE libreria.autores
+ADD PRIMARY KEY(autor_id);
+
+ALTER TABLE libreria.locales
+ADD PRIMARY KEY(local_id);
+
+ALTER TABLE libreria.libros
+ADD PRIMARY KEY(libro_id);
+
+ALTER TABLE libreria.empleados
+ADD PRIMARY KEY(empleado_id);
+
+ALTER TABLE libreria.ventas
+ADD PRIMARY KEY(local_id,factura_nro,libro_id);
+
+ALTER TABLE libreria.libroautor
+ADD PRIMARY KEY(autor_id,libro_id);
+
+ALTER TABLE libreria.editoriales
+ADD PRIMARY KEY(editorial_id);
+
+-- Punto 5
+INSERT INTO libreria.puestos
+VALUES
+    (15,'Cadete')
+    ,(16,'Tesorero')
+    ,(17,'Recepcionista');
+
+INSERT INTO libreria.autores
+VALUES
+    ('893-72-2258','Alterio','Ricardo','04823075','','Mar del Plata','BA','3874',0)
+    ,('899-46-2135','Legrand','Antonia','22985678','','Ramallo','ME','3956',1)
+    ,('998-72-3566','Bonelli','Florencia','10239578','','Bernal','BA','3847',1);
+
+INSERT INTO libreria.locales
+VALUES
+    ('3985','El Ateneo','Av San Martin 931','Capital','ME','48950')
+    ,('5981','SBS Librerías','Av Rivadavia 4791','Capital','CO','49003')
+    ,('4587','Yenny','Av Independencia 1682','Buenos Aires','CF','19834');
+
+INSERT INTO libreria.libros
+VALUES
+    ('TC7780','La historia sin fin','Cuento','0877',44.99,'','1983-06-15 00:00:00')
+    ,('TC7781','Yo soy Malala','Biografia','9999',56,NULL,'2004-02-05 00:00:00')
+    ,('TC7782','Programador .NET','Tecnico','9999',12,NULL,'2008-10-18 00:00:00');
+
+INSERT INTO libreria.empleados
+VALUES 
+    ('GHS52347M','Pepe','Argento',10,'0736','2000-04-13 00:00:00')
+    ,('TYT50241M','Angel','Perez',9,'0736','1997-08-09 00:00:00')
+    ,('ROP39435M','Ludmila','Cabrera',11,'0877','2012-01-01 00:00:00');
+
+INSERT INTO libreria.ventas
+VALUES
+    ('5981','423','1994-09-14 00:00:00',10,'Transf','TC7781')
+    ,('5981','723','1993-03-11 00:00:00',25,'Cheque','TC7782')
+    ,('4587','8791','1993-05-22 00:00:00',30,'Cheque','TC7782');
+
+INSERT INTO libreria.libroautor
+VALUES
+    ('893-72-2258','TC7781')
+    ,('998-72-3566','TC7780')
+    ,('899-46-2135','PS2106');
+
+INSERT INTO libreria.editoriales
+VALUES
+    ('5687','Aguilar','Buenos Aires','CF','Argentina')
+    ,('3710','Editorial Planeta','Buenos Aires','CF','Argentina')
+    ,('4967','Editorial Norma','Buenos Aires','CF','Argentina');
