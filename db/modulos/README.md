@@ -16,7 +16,7 @@
     ![Clientes](../../img/clientes.png)
 1. Cargar 5 registros en las tablas Facturas, Artículos y Clientes.
 
-## [Bonus 1: Construyendo bases de datos y tablas](1-bonus.sql)
+## [Bonus Track 1: Construyendo bases de datos y tablas](1-bonus-track.sql)
 1. Crear una base de datos llamada _librería_. La misma estará conformada por 8 tablas, las cuales tendrán la siguiente estructura:
 
     ![Bonus DB](../../img/1-bonus-db.png)
