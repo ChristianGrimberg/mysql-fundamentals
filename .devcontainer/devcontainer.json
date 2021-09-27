@@ -28,7 +28,8 @@
 		"eamodio.gitlens",
 		"felixfbecker.php-debug",
 		"felixfbecker.php-intellisense",
-		"mrmlnc.vscode-apache"
+		"mrmlnc.vscode-apache",
+		"janisdd.vscode-edit-csv"
 	],
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
