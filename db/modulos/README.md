@@ -16,10 +16,38 @@
     ![Clientes](../../img/clientes.png)
 1. Cargar 5 registros en las tablas Facturas, Artículos y Clientes.
 
+## [Bonus 1](1-bonus.sql)
+1. Elimine la tabla "agenda", si existe:
+    * Puede eliminar la tabla usando el navegador gráfico ubicado a la izquierda en workbench, o ejecutar la siguiente sentencia:
+
+    ```sql
+    DROP TABLE IF EXISTS agenda;
+    ```
+1. Cree una tabla llamada "agenda". Debe tener la siguiente estructura:
+
+    ![Bonus: Agenda](../../img/1-bonus-table.png)
+1. Visualice las tablas existentes en la base de datos para verificar la creación de "agenda".
+
+    > Nota: Puede visualizar el listado de tablas usando el navegador gráfico ubicado a la izquierda en workbench, o ejecutar el siguiente comando:
+
+    ```sql
+    SHOW TABLES;
+    ```
+1. Visualice la estructura de campos de la tabla "agenda".
+
+    > Nota: Puede visualizar la estructura de la tabla usando el navegador gráfico ubicado a la izquierda en workbench, o ejecutar el siguiente comando:
+
+    ```sql
+    DESCRIBE agenda;
+    ```
+1. Ingrese 3 registros en la tabla Agenda.
+1. Seleccione y muestre todos los registros de la tabla.
+1. Elimine la tabla "agenda", si existe.
+
 ## [Bonus Track 1: Construyendo bases de datos y tablas](1-bonus-track.sql)
 1. Crear una base de datos llamada _librería_. La misma estará conformada por 8 tablas, las cuales tendrán la siguiente estructura:
 
-    ![Bonus DB](../../img/1-bonus-db.png)
+    ![Bonus DB](../../img/1-bonus-track-db.png)
 
 1. Crear cada una de las tablas utilizando la sentencia _CREATE_ del subconjunto de sentencias DDL (Data Definition Language) del lenguaje SQL.
 1. Una vez creadas todas las tablas, insertar un conjunto de registros en cada una de ellas, utilizando el script provisto en la sección de descargas.
