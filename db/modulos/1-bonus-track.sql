@@ -323,7 +323,7 @@ INSERT INTO libreria.empleados
 VALUES 
     ('GHS52347M','Pepe','Argento',10,'0736','2000-04-13 00:00:00')
     ,('TYT50241M','Angel','Perez',9,'0736','1997-08-09 00:00:00')
-    ,('ROP39435M','Ludmila','Cabrera',11,'0877','2012-01-01 00:00:00');
+    ,('ROP39435F','Ludmila','Cabrera',11,'0877','2012-01-01 00:00:00');
 
 INSERT INTO libreria.ventas
 VALUES

@@ -109,7 +109,7 @@
 9. Obtener la cantidad de facturas y el monto promedio en cada año.
 10. Obtener la suma del monto y el promedio de las facturas según la letra.
 
-## [Bonus 3: Resumiendo y agrupando información]()
+## [Bonus 3: Resumiendo y agrupando información](3-bonus.sql)
 1. Listar cantidad de empleados.
 2. Listar cantidad de empleados de sexo masculino.
 3. Listar cantidad de autores de la provincia de Buenos Aires (BA).
