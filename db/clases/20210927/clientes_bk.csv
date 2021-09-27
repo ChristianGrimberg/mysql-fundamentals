@@ -1,0 +1,6 @@
+"idclientes","nombre","apellido","cuit","direccion","comentario"
+1,"juan","perez","22-78786778-4","parana 100","prueba de insert"
+2,"carla","ponce","22-89899089-5","",""
+3,"fernanda","porfido","33-90909090-7","",""
+4,"claudio","morales","33-00990099-5","uruguay 100",""
+5,"gonzalo","ramirez","11-23232334-3","","testeo"
