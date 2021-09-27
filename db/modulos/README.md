@@ -97,7 +97,7 @@
 1. Listar ventas registradas en el primer semestre de cualquier año cuyo método de pago no sea transferencia ni efectivo
 
 # Modulo 3
-## [Laboratorio 3: Funciones]()
+## [Laboratorio 3: Funciones](3-laboratorio.sql)
 1. Obtener el monto máximo de factura.
 2. Obtener el monto mínimo de factura.
 3. Obtener el monto mínimo de factura entre los años 2011 y 2020.
