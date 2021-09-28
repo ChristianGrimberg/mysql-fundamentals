@@ -125,3 +125,56 @@
 13. Listar cantidad de libros, precio máximo, precio mínimo, promedio de precio por año de publicación.
 14. Listar precio máximo por editorial.
 15. Listar cantidad de libros sin precio por editorial.
+
+# Modulo 4
+## [Laboratorio 4: Modificación de estructuras](4-laboratorio.sql)
+1. Agregar la relación (FK) entre la tabla _Facturas_ y la tabla _Clientes_.
+1. Agregar la relación (FK) entre la tabla _Facturas_ y la tabla _Articulos_.
+1. Generar un error de FK en la tabla _Facturas_.
+1. Agregar la columna _CPostal_ a la tabla _Clientes_.
+1. Eliminar la columna _CPostal_ de la tabla _Clientes_.
+
+## [Laboratorio Adicional 4: Consultas relacionadas](4-lab-adicional.sql)
+1. Informar nombre y apellido de los clientes que han realizado compras.
+1. Informar nombre y apellido de los clientes que tienen facturas con monto mayor a 2000 pesos.
+1. Informar letra y número de factura, el nombre y el precio de los artículos que se han vendido.
+1. Informar el precio máximo y mínimo de los artículos facturados con letra A.
+1. Informar la cantidad de facturas, nombre y apellido de cada cliente.
+1. Informar el promedio de venta para los artículos con precio >10.
+1. Informar nombre y apellido y total de monto de facturas por año para cada cliente.
+1. Informar qué facturas fueron emitidas al cliente Diaz.
+1. Informar el total vendido por artículo.
+1. Informar nombre y apellido del cliente que más ha comprado.
+
+## [Bonus Track 4: Modificando estructuras de tablas](4-bonus.sql)
+Si examinamos los datos guardados en las tablas, podremos observar que existen datos que pueden ser desconocidos o vacíos, sin que esto afecte la consistencia de la información. Existen otros que, por su naturaleza, deberían ser obligatorios, por lo que procederemos a exigir la existencia de valores en esa columna a partir de la característica NOT NULL en los casos correspondientes.
+
+1. Crear cada una de las restricciones NOT NULL utilizando la sentencia ALTER del subconjunto de sentencias DDL (Data Definition Language) del lenguaje SQL.
+
+Teniendo en cuenta que no es recomendable tener información de una entidad en una tabla que no guarda datos de esa entidad (nombre de las categorías o géneros literarios en la tabla de libros), crearemos una tabla llamada categorías con un valor de id generado automáticamente por el motor de base de datos y el nombre correspondiente a cada una de ellas.
+
+2. Crear la tabla categorías y llenarla con los datos existentes en la tabla de libros en el campo correspondiente.
+3. A continuación, agregar una columna llamada categoría_id de tipo número entero en la tabla libros utilizando la sentencia ALTER del subconjunto de sentencias DDL (Data Definition Language) del lenguaje SQL.
+
+Esta nueva columna guardará el valor traído desde la tabla categorías utilizando la sentencia UPDATE del subconjunto de sentencias DML (Data Definition Language) del lenguaje SQL.
+
+Una vez completadas todas las actualizaciones, eliminaremos la columna categoría de la tabla libros utilizando la sentencia ALTER del subconjunto de sentencias DDL del lenguaje SQL.
+
+Uno de los puntos más importantes en el diseño de una base de datos es la __Integridad Referencial__, un mecanismo que es recomendable implementar para garantizar la inexistencia de datos huérfanos (por ejemplo, la existencia de un libro en la tabla de libros cuya editorial no exista en la tabla de editoriales, ó una venta en cual se haya vendido un libro inexistente en la tabla de libros ó realizado en un local que no existe).
+
+4. Agregar a las tablas cada una de las restricciones de integridad referencial a partir de la creación de claves externas o foráneas (FOREIGN KEY) utilizando la sentencia ALTER del subconjunto de sentencias DDL (Data Definition Language) del lenguaje SQL y estableciendo cuál será el comportamiento de esas claves en caso de producirse una modificación en los valores de sus correspondientes claves primarias, a través de la especificación ON UPDATE.
+
+5. Finalmente procederemos a crear un Diagrama de base de datos utilizando la herramienta de ingeniería inversa de MySql Workbench, disponible en la opción de menú “Database”.
+
+![Bonus 4 DER](../../img/Bonus-4-DER.png)
+
+Enriqueciendo información a partir de consultas desde varias tablas. A varias de las consultas agrupadas le agregaremos datos para su mayor comprensión.
+
+1. Listar cantidad de libros por autor (agregar a la consulta id, nombre, apellido y ciudad del autor).
+1. Listar cantidad de libros que no sean novelas (agregar a la consulta id y nombre de la categoría).
+1. Listar cantidad de locales con código que comience con 7 (agregar todos los datos de los locales).
+1. Listar cantidad de unidades vendidas y calcular el monto total por libro (agregar título y precio del libro).
+1. Listar cantidad de facturas por local (agregar todos los datos de los locales).
+1. Listar cantidad de libros, precio máximo, precio mínimo, promedio de precio por categoría (agregar id y nombre de la categoría).
+1. Listar precio máximo por editorial (agregar nombre y país de la editorial).
+1. Listar cantidad de libros sin precio por editorial (agregar nombre, ciudad y provincia de la editorial).
